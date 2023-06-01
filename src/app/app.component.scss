@@ -1,0 +1,125 @@
+.container{
+  .lable-container{
+    margin: 60px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .label{
+      font-size: 35px;
+      font-weight: 600;
+
+    }
+  }
+  .report-form{
+    margin: 30px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 15px;
+    .item{
+      width: 250px;
+      height: fit-content;
+      .input {
+        cursor: initial;
+        position: relative;
+        &__label {
+          position: absolute;
+          left: 0;
+          top: 0;
+          padding: calc(.5rem * 0.75) calc(.5rem * .5);
+          margin: calc(.5rem * 0.75 + 3px) calc(.5rem * .5);
+          background: white;
+          white-space: nowrap;
+          color: #929292;
+          font-weight: 500;
+          //transform: translate(0, 0);
+          transform-origin: 0 0;
+          transition: top 120ms ease-in;
+          line-height: 1.2;
+          cursor: initial;
+          border-radius: 20px;
+        }
+
+        &__field {
+          display: flex;
+          height: 50px;
+          box-sizing: border-box;
+          justify-content: space-between;
+          width: 100%;
+          border: 1.5px solid #dadada;
+          padding: 5px 5px 5px 10px;
+          cursor: initial;
+          color: black;
+          border-radius: .5rem;
+          font-weight: 500;
+          outline: none !important;
+          font-size: 18px;
+
+          &:hover {
+            border: 2px solid #a8a7a7;
+          }
+
+          &:focus,
+          &:not(:placeholder-shown) {
+            & + .input__label {
+              top: -24px;
+              color: #5e5d5d;
+              font-weight: 550;
+            }
+          }
+        }
+      }
+    }
+    .problem-container{
+      width: 600px;
+    }
+    .submit-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .submit {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 40px;
+        color: white;
+        background: #1ec261;
+        border-radius: 10px;
+        font-weight: 600;
+        margin: 30px 0 0 0;
+        transition: 0.2s;
+
+        &:hover {
+          background: #047a36;
+        }
+      }
+    }
+  }
+  .get-reports-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .button{
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 40px;
+      color: white;
+      background: #2601a1;
+      border-radius: 10px;
+      font-weight: 600;
+      margin: 30px 0 0 0;
+      transition: 0.2s;
+      &:hover{
+        opacity: 60%;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="lable-container">
+    <div class="label">Repair bike request</div>
+  </div>
+  <form class="report-form" [formGroup]="reportForm">
+    <div class="name-container item">
+      <label class="input" for="name">
+        <input class="input__field" formControlName="name"  type="text" placeholder=" " id="name"/>
+        <span class="input__label" >Name</span>
+      </label>
+    </div>
+    <div class="email-container item">
+      <label class="input" for="email">
+        <input class="input__field" formControlName="email"  type="email" placeholder=" " id="email"/>
+        <span class="input__label" >Email</span>
+      </label>
+    </div>
+    <div class="problem-container item">
+      <label class="input" for="problem">
+        <input class="input__field"  formControlName="problem"  type="text" placeholder=" " id="problem"/>
+        <span class="input__label" >Problem</span>
+      </label>
+    </div>
+    <div class="submit-container">
+      <div  class="submit" (click)="addNewReport()">Send</div>
+    </div>
+  </form>
+  <div class="get-reports-container">
+    <div class="button" (click)="getAllReports()">Get all report to console</div>
+  </div>
+</div>
